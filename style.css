@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Righteous&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Fredoka', sans-serif;
+}
+
+body {
+    font-size: 100%;
+    font-family: 'Fredoka', sans-serif;
+    background-color: #1b191e;
+    overflow-x: hidden;
+  }
+
+.navbar{
+    width: 100vw;
+    color: white;
+    padding:1rem;
+    padding-inline: 0rem;
+    background-color: #1b191e;
+    -webkit-box-shadow: 0px 5px 15px 2px rgba(0,0,0,0.22); 
+box-shadow: 0px 5px 15px 2px rgba(0,0,0,0.22);
+    
+}
+
+.navbar img{
+    width: 13vw;
+    
+}
+
+.navbar .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+
+.navbar .container .menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar .container .menu .botao {
+    position: relative;
+    padding: 20px 20px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 1.2rem;
+}
+
+.navbar .container .menu .botao::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 5px;
+    background-color: #ce2222;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navbar .container .menu .botao:hover::before {
+    width: 100%;
+}
+
+.botao-especial {
+    position: relative;
+    padding: 20px 20px;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #ce2222;
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.botao-especial::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.226);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+}
+
+.botao-especial:hover {
+    background-color: #ce2222;
+}
+
+.botao-especial:hover::before {
+    transform: translate(-50%, -50%) scale(10);
+}
+
+
+/* Estilo personalizado para o carrossel */
+.carousel {
+    padding-top: 2rem;
+    padding-bottom: 15rem;
+    width: 62.5vw; /* Largura do carrossel */
+    height: 200px; /* Altura do carrossel */
+    margin: 0 auto; /* Centralizar o carrossel na página */
+  }
+
+  /* Estilo personalizado para as imagens dentro do carrossel */
+  .carousel img {
+    width: 100%; /* Faz com que a imagem ocupe 100% da largura do slide */
+    height: 100%; /* Faz com que a imagem ocupe 100% da altura do slide */
+  }
+
+  .destaque{
+    width: 62.5vw;
+    height: auto;
+    margin: 0 auto; /* Centralizar o carrossel na página */
+    background-color: #1e1d22;
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.178); 
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.171);
+}
+
+.destaque .titulo{
+    padding: 20px;
+    padding-bottom: 1rem;
+    color: white;
+    background-color: #d3d3d302;
+}
+
+.destaque .maiscursos{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding: 20px;
+    padding-bottom: 1rem;
+    color: white;
+    background: none
+}
+
+.destaque .maiscursos button{
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.4rem;
+    transition: all 0.2s ease-in;
+}
+
+.destaque .maiscursos button:hover{
+    color: white;
+    background-color: #ce2222;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Definindo o grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas com largura igual */
+    gap: 1rem; /* Espaçamento entre as colunas */
+    padding: 20px;
+    
+}
+
+/* Estilo para os itens do grid (opcional) */
+.grid-item {
+    display: flex;
+    min-height: 15rem;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    color: white;
+    font-size: 18px;
+    background-color: #d3d3d31c;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in;
+    margin-bottom: 1rem;
+}
+
+.grid-item:hover{
+    display: flex;
+    min-height: 15rem;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    color: white;
+    font-size: 18px;
+    background-color: #ce2222;
+    border-radius: 0.5rem;
+    
+    transform: scale(1.08);
+}
+
+.grid-item h3{
+    max-width: 10rem;
+    display:block;
+    word-wrap:break-word;
+}
+
+.image-container {
+    width: 100%;
+    height: 10rem;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+/* Estilo para a imagem */
+.image-container img {
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    overflow: hidden;
+    
+
+}
+
+.inscrevase{
+    display: flex;
+    justify-content: end;
+    position: relative;
+    top:1rem;
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    padding-bottom: 0.5rem;
+    padding-inline:1.2rem;
+    border-radius: 0.4rem;
+    border: none;
+    cursor: pointer;
+    background-color: #ce2222;
+    color: white;
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.44); 
+box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.44);
+}
+
+.unidades .titulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    padding-inline: 0rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.grid-container-unidades {
+    width: 70vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas com largura igual */
+    grid-template-rows: repeat(3, 1fr); /* 3 linhas com altura igual */
+    gap: 2rem; /* Espaçamento entre as células do grid */
+    padding: 20px;
+    margin: 0 auto;
+    padding-bottom: 6rem;
+}
+
+/* Estilo para os itens do grid (opcional) */
+.grid-item-unidades {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    background-color: #d3d3d30a;
+    color: white;
+    gap: 1.4rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in;
+}
+
+.grid-item-unidades:hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    background-color: #ce22225e;
+    color: white;
+    gap: 1.4rem;
+    font-size: 1.5rem;
+    transform: scale(1.05);
+}
+
+.leiamais{
+    font-size: 1.2rem;
+    border: none;
+    padding: 0.2rem;
+    color: white;
+    background-color: #ce2222;
+    padding-inline: 1.4rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+
+.engenhao-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+  }
+
+
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .engenhao-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1e1d22;
+border-right: 4px solid #af1e1e;
+border-bottom: 2px solid #af1e1e;
+  color: #fff;
+    padding: 20px;
+    width: 70vw;
+    border-radius: 5px;
+  }
+
+  .engenhao-modal h1{
+    font-size: 3rem;
+  }
+
+  .engenhao-close {
+    float: right;
+    cursor: pointer;
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  .engenhao-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    margin-top: 2rem;
+  }
+
+  .engenhao-info-left {
+    flex: 1;
+  }
+
+  .engenhao-info-right img {
+    max-width: 100%;
+    width: 30rem;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 0.4rem;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1d22;
+    border-top: 2px solid #af1e1e;
+    color: white;
+    text-align: center;
+    padding: 1.2rem;
+    padding-inline: 0;
+    gap: 0.4rem;
+  }
+
+  .footer img{
+    width: 7.2rem;
+    animation: scaleAnimation 2s ease-in-out infinite; /* Define a animação */
+  }
+
+  @keyframes scaleAnimation {
+    0%, 100% { transform: scale(0.90); } /* Tamanho original (não escalado) */
+    50% { transform: scale(1.0); } /* Escala para 1.5 (aumenta o tamanho) */
+  }
+
+  .footer .textos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer .textos h1{
+    font-size: 3.8vw;
+  }
+  .footer .textos p{
+    font-size: 0.67vw;
+  }

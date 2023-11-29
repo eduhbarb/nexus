@@ -1,0 +1,136 @@
+.corpinho{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+}
+.ranking{
+    width: 62.5vw;
+    height: auto;
+    margin: 0 auto; /* Centralizar o carrossel na página */
+    background-color: #1b191e;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    padding-inline: 0rem;
+}
+
+.titulo h1{
+    font-size: 3rem;
+    margin: 0 auto;
+    color: white;
+}
+
+table {
+    width: 80%;
+    margin: 0px auto;
+    border-collapse: collapse;
+    line-height:1rem;
+    color: white;
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.178); 
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.171);
+  }
+
+  th, td {
+    
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    color: white;
+    font-size: 1.2rem;
+    padding: 1rem;
+    background-color: #af1e1e;
+  }
+
+  tr {
+    background-color: #1e1d22;
+  }
+
+
+  .profile-pic {
+    max-width: 100%;
+    max-height: 2rem;
+    border-radius: 50%;
+  }
+
+
+
+
+
+    /* Estilo da div da aba lateral */
+    #abaLateral {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) scaleX(0); /* Inicialmente, a largura é 0 */
+  transform-origin: left; /* Define o ponto de origem da escala */
+  width: 20vw; /* Largura final da aba */
+  height: 76vh;
+  background-color: #1e1d22;
+  border-right: 4px solid #af1e1e;
+  border-bottom: 2px solid #af1e1e;
+  padding: 10px;
+  -webkit-border-top-right-radius: 3rem;
+  -webkit-border-bottom-right-radius: 3rem;
+  -moz-border-radius-topright: 3rem;
+  -moz-border-radius-bottomright: 3rem;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  
+  overflow: hidden; /* Esconde o conteúdo que ultrapassar a largura */
+  transition: transform 0.3s; /* Define a transição de animação */
+}
+    
+/* Estilo do botão que aciona a aba lateral */
+#botaoAbrirAba {
+  position: fixed;
+  top: 50%;
+  left: 0; /* Posiciona o botão à esquerda da tela */
+  transform: translateY(-50%);
+  -webkit-border-top-right-radius: 3rem;
+-webkit-border-bottom-right-radius: 3rem;
+-moz-border-radius-topright: 3rem;
+-moz-border-radius-bottomright: 3rem;
+border-top-right-radius: 3rem;
+border-bottom-right-radius: 3rem;
+background-color: #1e1d22;
+border-right: 4px solid #af1e1e;
+border-bottom: 2px solid #af1e1e;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#botaoAbrirAba img{
+  width:10vw;
+  animation: scaleAnimation 2s ease-in-out infinite; /* Define a animação */
+}
+
+.abacontainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;
+  text-align: center;
+  color: white;
+  gap: 0.8rem;
+}
+
+.img-presente img{
+  width: 20rem;
+}
+
+/* Definindo a animação */
+@keyframes scaleAnimation {
+    0%, 100% { transform: scale(0.90); } /* Tamanho original (não escalado) */
+    50% { transform: scale(1.0); } /* Escala para 1.5 (aumenta o tamanho) */
+  }
